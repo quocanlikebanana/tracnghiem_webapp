@@ -22,12 +22,19 @@ html {
 body {
     padding: 0;
     margin: 0;
-    display: flex;
     min-width: 100vw;
     min-height: 100vh;
     /* min-width: 100%;
     min-height: 100%;
     no se hoi lech do vertical scrollbar*/
+}
+
+.main-container {
+    padding: 0;
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -397,4 +404,26 @@ radio-button[aria-disabled="true"]:focus::before {
 
 .review-transition-buttons-container>.negative-button:hover {
     background-color: hsl(300, 50%, 50%);
+}
+
+/* =========================== */
+
+#timer-div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    width: 15%;
+    height: 15%;
+}
+
+#timer-div>label {
+    line-height: 1.1;
+    font-size: 0.9;
+    font-weight: bold;
+    text-align: center;
 }

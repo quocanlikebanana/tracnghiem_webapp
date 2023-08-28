@@ -42,121 +42,130 @@
 </head>
 
 <body onload="onBodyLoad()">
+	<div class="main-container">
 
-	<div class="block-container title-header"
-		 id="header-div">
-		Câu Hỏi Trắc Nghiệm
-	</div>
+		<div class="block-container title-header"
+			 id="header-div">
+			Câu Hỏi Trắc Nghiệm
+		</div>
 
-	<div class="block-container">
+		<div class="block-container">
 
-		<div class="hide"
-			 id="mode-div">
-			<div class="title-body">Chọn phần câu hỏi:</div>
-
-			<div class="mode-container"
+			<div class="hide"
 				 id="mode-div">
-				<button id="lanhdao-mode-button">Lãnh Đạo</button>
-				<button id="doi-mode-button">Công Chức Đội</button>
+				<div class="title-body">Chọn phần câu hỏi:</div>
+
+				<div class="mode-container"
+					 id="mode-div">
+					<button id="lanhdao-mode-button">Lãnh Đạo</button>
+					<button id="doi-mode-button">Công Chức Đội</button>
+				</div>
 			</div>
+
+			<div class="hide"
+				 id="setting-div">
+
+				<div class="title-body">Số câu hỏi từng phần:</div>
+				<div class="number-of-question-container">
+					<label-num-selector id="ktc-lns"
+										CustomLabel="Kiến thức chung"></label-num-selector>
+					<label-num-selector id="xlvphc-lns"
+										CustomLabel="Xử lý vi phạm hành chính"></label-num-selector>
+					<label-num-selector id="tcdkntc-lns"
+										CustomLabel="Tiếp công dân, khiếu nại, tố cáo"></label-num-selector>
+				</div>
+				<div class="title-body">Thời Gian:</div>
+				<div class="time-selector-container">
+					<input is="num-selector"
+						   id="thoigian-ns"
+						   max="1000"
+						   min="1"
+						   value="60">
+					<label>(Phút)</label>
+				</div>
+				<div class="setting-transition-buttons-container">
+					<button class="negative-button"
+							id="quay-lai-button">Quay lại</button>
+					<button class="positive-button"
+							id="tiep-theo-button">Tiếp theo</button>
+				</div>
+			</div>
+
+			<div class="hide"
+				 id="question-div">
+
+				<div class="timer-part-container">
+				</div>
+
+				<div class="question-part-container"
+					 id="question-part-div">
+				</div>
+
+			</div>
+
+			<div class="hide"
+				 id="result-div">
+
+				<div class="title-body">
+					Kết quả:
+				</div>
+
+				<div class="result-container">
+					<label>Tổng số câu:</label>
+					<label class="result-info"
+						   id="result-total-label">0</label>
+					<label>Số câu đúng:</label>
+					<label class="result-info"
+						   id="result-correct-label">0</label>
+					<label>Số câu sai:</label>
+					<label class="result-info"
+						   id="result-wrong-label">0</label>
+					<label>Số câu bỏ qua:</label>
+					<label class="result-info"
+						   id="result-skip-label">0</label>
+					<label><b><u>Điểm</u></b>:</label>
+					<label class="result-info"
+						   id="result-score-label">0</label>
+				</div>
+
+				<div class="result-transition-buttons-container">
+					<button class="negative-button"
+							id="review-button">Xem đáp án</button>
+					<button class="positive-button"
+							id="restart-button">Làm bài lại</button>
+				</div>
+
+			</div>
+
 		</div>
 
-		<div class="hide"
-			 id="setting-div">
-
-			<div class="title-body">Số câu hỏi từng phần:</div>
-			<div class="number-of-question-container">
-				<label-num-selector id="ktc-lns"
-									CustomLabel="Kiến thức chung"></label-num-selector>
-				<label-num-selector id="xlvphc-lns"
-									CustomLabel="Xử lý vi phạm hành chính"></label-num-selector>
-				<label-num-selector id="tcdkntc-lns"
-									CustomLabel="Tiếp công dân, khiếu nại, tố cáo"></label-num-selector>
-			</div>
-			<div class="title-body">Thời Gian:</div>
-			<div class="time-selector-container">
-				<input is="num-selector"
-					   id="thoigian-ns"
-					   max="1000"
-					   min="1"
-					   value="60">
-				<label>(Phút)</label>
-			</div>
-			<div class="setting-transition-buttons-container">
+		<div class="block-container hide"
+			 id="question-footer-div">
+			<div class=" question-footer-container">
 				<button class="negative-button"
-						id="quay-lai-button">Quay lại</button>
-				<button class="positive-button"
-						id="tiep-theo-button">Tiếp theo</button>
-			</div>
-		</div>
-
-		<div class="hide"
-			 id="question-div">
-
-			<div class="timer-part-container">
-			</div>
-
-			<div class="question-part-container"
-				 id="question-part-div">
-			</div>
-
-		</div>
-
-		<div class="hide"
-			 id="result-div">
-
-			<div class="title-body">
-				Kết quả:
-			</div>
-
-			<div class="result-container">
-				<label>Tổng số câu:</label>
-				<label class="result-info"
-					   id="result-total-label">0</label>
-				<label>Số câu đúng:</label>
-				<label class="result-info"
-					   id="result-correct-label">0</label>
-				<label>Số câu sai:</label>
-				<label class="result-info"
-					   id="result-wrong-label">0</label>
-				<label>Số câu bỏ qua:</label>
-				<label class="result-info"
-					   id="result-skip-label">0</label>
-				<label><b><u>Điểm</u></b>:</label>
-				<label class="result-info"
-					   id="result-score-label">0</label>
-			</div>
-
-			<div class="result-transition-buttons-container">
-				<button class="negative-button"
-						id="review-button">Xem đáp án</button>
-				<button class="positive-button"
-						id="restart-button">Làm bài lại</button>
-			</div>
-
-		</div>
-
-	</div>
-
-	<div class="block-container hide"
-		 id="question-footer-div">
-		<div class=" question-footer-container">
-			<button class="negative-button"
-					id="cancel-button">Hủy bỏ</button>
-			<div>
-				<!-- <button class="pagination">&lt;</button>
+						id="cancel-button">Hủy bỏ</button>
+				<div>
+					<!-- <button class="pagination">&lt;</button>
 				<button class="pagination">&gt;</button> -->
+				</div>
+				<button class="positive-button"
+						id="submit-button">Nộp bài</button>
 			</div>
-			<button class="positive-button"
-					id="submit-button">Nộp bài</button>
 		</div>
-	</div>
 
-	<div class="block-container hide"
-		 id="review-footer-div">
-		<div class="review-transition-buttons-container">
-			<button class="negative-button"
-					id="review-return-button">Trở về kết quả</button>
+		<div class="block-container hide"
+			 id="review-footer-div">
+			<div class="review-transition-buttons-container">
+				<button class="negative-button"
+						id="review-return-button">Trở về kết quả</button>
+			</div>
+		</div>
+
+		<div class="block-container hide"
+			 id="timer-div">
+			<label>Thời gian:</label>
+			<label id="timer">
+			</label>
 		</div>
 	</div>
 

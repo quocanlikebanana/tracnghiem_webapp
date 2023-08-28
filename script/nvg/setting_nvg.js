@@ -12,6 +12,7 @@ tieptheo_btn.addEventListener("click", () => {
         thoigian: Number(thoigian_ns.value),
     }
     myLocalStorage.setRecord_DefaultSetting(setting);
+    myTimer.start(setting.thoigian, disableQuestions);
     loadQuestionNvg(data, setting);
     Setting_To_Question();
 });
@@ -26,6 +27,7 @@ function Setting_To_Question() {
     setting_div.classList.add("hide");
     question_div.classList.remove("hide");
     questionFooter_div.classList.remove("hide");
+    timer_div.classList.remove("hide");
 }
 
 function loadQuestionNvg(data, setting) {

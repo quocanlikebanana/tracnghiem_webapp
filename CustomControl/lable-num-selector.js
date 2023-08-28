@@ -40,8 +40,6 @@ class NumSelector extends HTMLInputElement {
     connectedCallback() {
         this.setAttribute("type", "number");
         this.setAttribute("required", "");
-        // this.onkeydown = this.handle_onkeydown;
-        // this.onchange = this.handle_onchange;
         this.addEventListener("keydown", this.handle_onkeydown);
         this.addEventListener("change", this.handle_onchange);
     }

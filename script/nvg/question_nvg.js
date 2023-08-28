@@ -1,6 +1,7 @@
 submit_btn.addEventListener("click", () => {
-    let questions = questionPart_div.querySelectorAll("radio-group");
-    verifyCorrectness(questions);
+    myTimer.stop();
+    disableQuestions();
+    verifyCorrectness();
     Question_To_Result();
 });
 
@@ -8,7 +9,8 @@ cancel_btn.addEventListener('click', () => {
     Question_To_Setting();
 });
 
-function verifyCorrectness(radioGroups) {
+function verifyCorrectness() {
+    const radioGroups = questionPart_div.querySelectorAll("radio-group")
     var numQuestion = 0, numAnswered = 0, numCorrectAnswer = 0;
     radioGroups.forEach(radioGroup => {
         numQuestion++;
@@ -27,10 +29,15 @@ function verifyCorrectness(radioGroups) {
             radioGroup.children[0].children[1].classList.add("unanswered-question");
             (radioGroup.correctRadio()).classList.add("correct-answer");
         }
-        // Disable radio buttons
-        radioGroup.disable();
     });
     updateResult(numQuestion, numAnswered, numCorrectAnswer)
+}
+
+function disableQuestions() {
+    const radioGroups = questionPart_div.querySelectorAll("radio-group")
+    radioGroups.forEach(radioGroup => {
+        radioGroup.disable();
+    });
 }
 
 function updateResult(nq, na, nc) {
@@ -45,11 +52,13 @@ function Question_To_Result() {
     result_div.classList.remove("hide");
     question_div.classList.add("hide");
     questionFooter_div.classList.add("hide");
+    timer_div.classList.add("hide");
 }
 
 function Question_To_Setting() {
     setting_div.classList.remove("hide");
     question_div.classList.add("hide");
     questionFooter_div.classList.add("hide");
+    timer_div.classList.add("hide");
 }
 

@@ -37,5 +37,6 @@ function loadSettingNvg() {
         ktc_lns.setAttribute("DefaultValue", preSetting.socau.ktc);
         xlvphc_lns.setAttribute("DefaultValue", preSetting.socau.xlvphc);
         tcdkntc_lns.setAttribute("DefaultValue", preSetting.socau.tcdkntc);
+        thoigian_ns.setAttribute("value", preSetting.thoigian);
     }
 }

@@ -31,6 +31,8 @@ const questionFooter_div = document.getElementById("question-footer-div")
 const submit_btn = document.getElementById("submit-button");
 const cancel_btn = document.getElementById("cancel-button");
 
+const timer_div = document.getElementById("timer-div");
+
 //================================================================================
 
 const result_div = document.getElementById("result-div");
