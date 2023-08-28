@@ -77,7 +77,7 @@ class LabelNumSelector extends HTMLElement {
         var maxValue = this.getAttribute("MaxValue")
             ? this.getAttribute("MaxValue") : 100;
         var defaultValue = this.getAttribute("DefaultValue")
-            ? this.getAttribute("DefaultValue") : 1;
+            ? this.getAttribute("DefaultValue") : 20;
         this.innerHTML = `
                 <div class="label-num-selector-style">
                         <label class="title">${customLabel}</label>
