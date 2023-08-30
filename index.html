@@ -22,14 +22,15 @@
 			src="script/variable.js"></script>
 	<script defer
 			src="script/function.js"></script>
+	<script defer
+			src="script/htmlLoad.js"></script>
+	<script defer
+			src="script/service.js"></script>
 
 	<script defer
-			src="script/data/dataAccess.js"></script>
+			src="script/nvg/pack_nvg.js"></script>
 	<script defer
-			src="script/data/htmlLoad.js"></script>
-
-	<script defer
-			src="script/nvg/mode_nvg.js"></script>
+			src="script/nvg/preview_nvg.js"></script>
 	<script defer
 			src="script/nvg/setting_nvg.js"></script>
 	<script defer
@@ -46,21 +47,45 @@
 
 		<div class="block-container title-header"
 			 id="header-div">
-			Câu Hỏi Trắc Nghiệm
+			Câu Hỏi Trắc Nghiệm (Kiểm thử)
 		</div>
 
 		<div class="block-container">
 
-			<div class="hide"
-				 id="mode-div">
-				<div class="title-body">Chọn phần câu hỏi:</div>
+			<!-- PACK -->
 
-				<div class="mode-container"
-					 id="mode-div">
-					<button id="lanhdao-mode-button">Lãnh Đạo</button>
-					<button id="doi-mode-button">Công Chức Đội</button>
+			<div class="hide"
+				 id="pack-div">
+				<div class="title-body">Đề:</div>
+				<div class="pack-choose-container"
+					 id="pack-choose-div">
 				</div>
 			</div>
+
+			<!-- PREVIEW -->
+
+			<div class="hide"
+				 id="preview-div">
+				<div class="title-body">Thông tin bài thi:</div>
+				<div class="preview-info-container">
+					<div class="grid-display">
+						<label id="de-so-lb">Đề số: </label>
+						<label>Số câu mỗi phần:</label>
+						<div class="so-cau-moi-phan-container"
+							 id="so-cau-moi-phan-div">
+						</div>
+						<label id="thoi-gian-lb">Thời gian làm bài:</label>
+					</div>
+				</div>
+				<div class="setting-transition-buttons-container">
+					<button class="negative-button"
+							id="quay-lai-preview-button">Quay lại</button>
+					<button class="positive-button"
+							id="tiep-theo-preview-button">Tiếp theo</button>
+				</div>
+			</div>
+
+			<!-- SETTING -->
 
 			<div class="hide"
 				 id="setting-div">
@@ -91,6 +116,8 @@
 				</div>
 			</div>
 
+			<!-- QUESTION -->
+
 			<div class="hide"
 				 id="question-div">
 
@@ -102,6 +129,8 @@
 				</div>
 
 			</div>
+
+			<!-- RESULT -->
 
 			<div class="hide"
 				 id="result-div">

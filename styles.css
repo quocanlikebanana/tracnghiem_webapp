@@ -74,14 +74,14 @@ body {
     padding: 30px 30px 10px 30px;
 }
 
-.mode-container {
+.pack-choose-container {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    margin: 10px 20px 20px 20px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin: 10px 20px;
     gap: 10px;
 }
 
-.mode-container>button {
+.pack-choose-container>button {
     background-color: hsl(300, 100%, 20%);
     color: white;
     padding: 10px 20px;
@@ -91,8 +91,68 @@ body {
     transition: 0.15s;
 }
 
-.mode-container>button:hover {
+.pack-choose-container>button:hover {
     background-color: hsl(300, 30%, 50%);
+}
+
+.pack-choose-container>.appendix {
+    background-color: hsl(330, 100%, 20%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.pack-choose-container>.appendix:hover {
+    background-color: hsl(330, 30%, 50%);
+}
+
+.pack-choose-container>.choosen {
+    background-color: hsl(60, 100%, 20%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.pack-choose-container>.choosen:hover {
+    background-color: hsl(60, 30%, 50%);
+}
+
+/* =========================== */
+
+.preview-info-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 15px 0 30px 0;
+}
+
+.preview-info-container>.grid-display {
+    display: grid;
+    width: 60%;
+    grid-template-rows: auto auto auto auto;
+}
+
+.preview-info-container>.grid-display>.so-cau-moi-phan-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 30px;
+}
+
+.preview-info-container>.grid-display>.so-cau-moi-phan-container>label {
+    margin: 5px 0;
+}
+
+.preview-info-container>.grid-display>label {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /* =========================== */

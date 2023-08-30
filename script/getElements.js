@@ -6,9 +6,17 @@ const mainTitle_div = document.getElementById("header-div");
 
 //================================================================================
 
-const mode_div = document.getElementById("mode-div");
-const lanhdaoMode_btn = document.getElementById("lanhdao-mode-button");
-const doiMode_btn = document.getElementById("doi-mode-button");
+const pack_div = document.getElementById("pack-div");
+const pack_choose_div = document.getElementById("pack-choose-div");
+
+//================================================================================
+
+const preview_div = document.getElementById("preview-div");
+const de_so_lb = document.getElementById("de-so-lb");
+const so_cau_moi_phan_div = document.getElementById("so-cau-moi-phan-div");
+const thoi_gian_lb = document.getElementById("thoi-gian-lb");
+const quaylai_preview_btn = document.getElementById("quay-lai-preview-button");
+const tieptheo_preview_btn = document.getElementById("tiep-theo-preview-button");
 
 //================================================================================
 

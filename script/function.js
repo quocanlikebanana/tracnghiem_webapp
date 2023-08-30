@@ -9,8 +9,10 @@ Element.prototype.insertChildAtIndex = function (child, index) {
     }
 }
 
-function deepCopy(array) {
-    return array.map(item => Array.isArray(item) ? deepCopy(item) : item);
+function clearChildren(htmlElement) {
+    while (htmlElement.firstChild) {
+        htmlElement.removeChild(htmlElement.firstChild);
+    }
 }
 
 function shuffleArray(array) {
@@ -20,15 +22,21 @@ function shuffleArray(array) {
     }
 }
 
+function deepCopy(array) {
+    return array.map(item => Array.isArray(item) ? deepCopy(item) : item);
+}
+
 function pickAndShuffle(array, range) {
     const newArray = deepCopy(array);
     shuffleArray(newArray);
     return newArray.slice(0, range);
 }
 
-function genAnswerOrder() {
+function genAnswerOrder(shuffe) {
     var arrayOrder = [1, 2, 3, 4];
-    shuffleArray(arrayOrder);
+    if (shuffe == true) {
+        shuffleArray(arrayOrder);
+    }
     return {
         "A": arrayOrder[0],
         "B": arrayOrder[1],

@@ -6,7 +6,7 @@ submit_btn.addEventListener("click", () => {
 });
 
 cancel_btn.addEventListener('click', () => {
-    Question_To_Setting();
+    Question_To_Preview();
 });
 
 function verifyCorrectness() {
@@ -57,6 +57,13 @@ function Question_To_Result() {
 
 function Question_To_Setting() {
     setting_div.classList.remove("hide");
+    question_div.classList.add("hide");
+    questionFooter_div.classList.add("hide");
+    timer_div.classList.add("hide");
+}
+
+function Question_To_Preview() {
+    preview_div.classList.remove("hide");
     question_div.classList.add("hide");
     questionFooter_div.classList.add("hide");
     timer_div.classList.add("hide");
