@@ -3,7 +3,7 @@ review_btn.addEventListener("click", () => {
 });
 
 restart_btn.addEventListener("click", () => {
-    Result_To_Mode();
+    Result_To_Pack();
 });
 
 reviewReturn_btn.addEventListener("click", () => {
@@ -25,4 +25,9 @@ function Revision_To_Result() {
 function Result_To_Mode() {
     result_div.classList.add("hide");
     mode_div.classList.remove("hide");
+}
+
+function Result_To_Pack() {
+    result_div.classList.add("hide");
+    pack_div.classList.remove("hide");
 }
