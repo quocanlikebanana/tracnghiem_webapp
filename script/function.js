@@ -42,5 +42,9 @@ function genAnswerOrder(shuffe) {
         "B": arrayOrder[1],
         "C": arrayOrder[2],
         "D": arrayOrder[3],
+        "1": arrayOrder[0],
+        "2": arrayOrder[1],
+        "3": arrayOrder[2],
+        "4": arrayOrder[3],
     }
 }

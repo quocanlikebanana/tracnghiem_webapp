@@ -34,6 +34,10 @@ function loadQuestions(data) {
                 case "B":
                 case "C":
                 case "D":
+                case "1":
+                case "2":
+                case "3":
+                case "4":
                     const ans = document.createElement("radio-button");
                     if (shuffleAnswer == false) {
                         ans.innerHTML = "(" + key + "). &nbsp&nbsp" + mcq[key];
