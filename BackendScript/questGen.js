@@ -75,7 +75,7 @@ function questionSplit(numPerTest) {
 }
 
 function performQuestionGenerating() {
-    let res = questionSplit(60);
+    let res = questionSplit(46);
     let idx = 0;
     res.data.forEach((test) => {
         idx++;
